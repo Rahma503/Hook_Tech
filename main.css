@@ -21,6 +21,7 @@
     align-items: center;
     padding: 20px 20px;
     height: 100px;
+    border-radius: 10px;
 
     
 }
@@ -83,7 +84,7 @@
     min-height: 100vh;
     display: flex;
     align-items: center;
-    background: url('./images/business-desk-with-copy-space.jpg') center center/cover no-repeat;
+    background: url('https://img.freepik.com/free-photo/flat-lay-workstation-with-cup-tea-copy-space_23-2148430864.jpg?t=st=1736283680~exp=1736287280~hmac=bdc00bf6c5a62327fd08248086c77b3bdd6783400740ceb6091ec162aa14562e&w=1380') center center/cover no-repeat;
     /* background-color: #dcdcdd; */
     background-size: cover;
     background-position: center;
@@ -192,7 +193,7 @@
 }
 
 
-#services .icon{
+#services .icon,#services .fa-envelope{
     font-size:6rem ;
     text-align: center;
     padding: auto;
@@ -208,21 +209,20 @@
 }
 
 
-.image-slider {
+/* .image-slider {
     position: relative;
     width: 70%;
     max-width: 800px;
     margin: auto;
     overflow: hidden;
-    resize: both;
-    border: 2px  dashed var(--wcolor);
     border-radius: 15px;
     background-color: #f7f7f7;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .slider-wrapper {
     display: flex;
-    transition: transform 0.5s ease;
+    transition: transform 0.5s ease-in-out;
     width: 100%;
 }
 
@@ -238,16 +238,10 @@
 }
 
 .slide img {
-    width: 85%;
-    height: 80%;
+    width: 100%;
+    height: auto;
     object-fit: cover;
-    border-bottom: 2px solid var(--wcolor);
-}
-
-.rating {
-    padding: 10px 0;
-    font-size: 2em;
-    color: gold;
+    border-bottom: 2px solid #ccc;
 }
 
 .arrow {
@@ -262,22 +256,51 @@
     font-size: 24px;
     border-radius: 50%;
     z-index: 10;
+    transition: background-color 0.3s;
 }
 
 .arrow:hover {
-    background-color: var(--wcolor);
+    background-color: #333;
 }
 
 .prev {
-    left: 20px;
+    left: 10px;
 }
 
 .next {
-    right: 20px;
+    right: 10px;
 }
 
+.dots {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+}
 
-#reviews .review-card {
+.dots button {
+    width: 12px;
+    height: 12px;
+    margin: 0 5px;
+    border-radius: 50%;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.dots button.active {
+    background-color: #333;
+}
+
+.dots button:hover {
+    background-color: #666;
+} */
+
+
+
+#reviewss .review-card {
     background-color: #f9f9f9;
     padding: 15px;
     margin: 10px auto;
@@ -286,27 +309,32 @@
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-#reviews  .review-header {
+#reviewss  .review-header {
     display: flex;
     align-items: center;
     margin-bottom: 10px;
 }
 
-#reviews  .avatar {
+#reviewss  .avatar {
     width: 50px;
     height: 50px;
     border-radius: 50%;
     margin-right: 10px;
 }
 
-#reviews .customer-name {
+#reviewss .customer-name {
     font-weight: bold;
     margin-right: auto;
 }
 
-#reviews  .timestamp {
+#reviewss  .timestamp {
     font-size: 12px;
     color: #888;
+}
+
+#reviewss .ratingg{
+    font-size: 24px;
+    color: gold;
 }
 
 
@@ -347,7 +375,8 @@
     justify-content: center;
     align-items: center;
     /* background-color: rgb(247, 238, 222); */
-    background: url('./images/val.jpg') center center/cover no-repeat;
+    /* background: url('./images/val.jpg') center center/cover no-repeat; */
+    flex-direction: row-reverse;
 }
 
 #about .title {
@@ -375,9 +404,17 @@
 }
 
 #about .about-content img {
-    width: 600px;
+    width: 700px;
     height: 450px;
+    border-radius: 100px;
+    /* margin-left: 100px; */
 }
+
+
+
+
+
+
 
 
 
@@ -387,13 +424,19 @@
  
 
 }
-#contactss h2{
+#contactss .contactheader{
+    display: flex;
     font-size: 50px;
-}
-#contactss .container{
+    /* text-align: center; */
+
+    margin-left: 210px;
+
     
-    width: 900px;
-    /* padding: 20px 20px; */
+}
+#contactss .containerr{
+    
+    width: 800px;
+    
 }
 
 #contactss .contact-content{
@@ -416,7 +459,7 @@
 #contactss .contact-content .contact-info h3{ 
     font-size: 28px;
     margin-bottom: 10px;
-    /* color: #c85e07; */
+   
 
  
 }
@@ -456,7 +499,7 @@
 
 @media (max-width:1023px){
     .header{
-        padding: 12px 20px;
+        padding: 12px 15px;
     }
     .header .others{
         padding-left: 10px;
@@ -487,33 +530,229 @@
 
 }
 
-@media (max-width:500px)
-{
-  body{
-    font-size: 12px;
-  }
-  div{
-    padding: 50px 10px;
-}
-.main1{
-    padding: 80px 80px;
-}
-  .main1 h2{
-    font-size: 0.8em;
-  }
-  .main1 h3{
-    font-size: 1.2em;
-  }
-  .content{
-        flex-direction: column;
-        align-items: center;
-  }
-    .logo{
-        margin-right: 80px;
-    }
-    .image{
-        background-size: cover; 
-         width: 80px; 
+@media (max-width: 500px) {
+    body {
+        font-size: 12px;
     }
 
+    .header {
+        flex-direction: column;
+        padding: 10px 15px;
+        height: auto;
+        align-items: center;
+    }
+
+    .header .others {
+        font-size: 16px;
+        padding: 5px;
+    }
+
+    .logo-container .logo {
+        margin-right: 0;
+        margin-bottom: 10px;
+        width: 80px;
+    }
+
+    .main1 {
+        padding: 50px 20px;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .main1 h3 {
+        font-size: 1.5em;
+        margin-bottom: 20px;
+    }
+
+    .main1 span {
+        font-size: 2em;
+    }
+
+    .main_btn {
+        padding: 0.7em 1.5em;
+        font-size: 1em;
+    }
+
+    .content {
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+    }
+
+    #services .card {
+        width: 90%;
+        margin: 15px 0;
+    }
+
+    .image-slider {
+        width: 90%;
+        margin: 20px auto;
+    }
+
+    .slider-wrapper {
+        flex-direction: column;
+    }
+
+    #reviews .review-card {
+        width: 90%;
+        margin: 10px auto;
+    }
+
+    #about .about-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #about .about-content img {
+        width: 100%;
+        height: auto;
+        margin-bottom: 20px;
+    }
+
+    #contactss .container {
+        width: 90%;
+    }
+
+    #contactss .contact-content {
+        flex-direction: column;
+    }
+
+    #contactss .contact-content .contact-info {
+        width: 100%;
+    }
+
+    #contactss .contact-content .contact-info div {
+        margin: 15px 10px;
+    }
+
+    .footer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer p {
+        margin-bottom: 15px;
+    }
+}
+
+
+
+@media (max-width: 1023px) {
+    .header {
+        padding: 12px 15px;
+    }
+
+    .title {
+        font-size: 1.7em;
+    }
+
+    .main1 {
+        padding: 80px 20px;
+    }
+
+    .main1 h2 {
+        font-size: 1em;
+    }
+
+    .main1 h3 {
+        font-size: 1.6em;
+    }
+
+    .content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo-container .logo {
+        margin-right: 120px;
+    }
+
+    #services .card {
+        width: 90%;
+        margin: 15px 0;
+    }
+
+    #contactss .containerr {
+        width: 90%;
+    }
+
+    .footer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer p {
+        margin-bottom: 15px;
+    }
+}
+
+@media (max-width: 500px) {
+    body {
+        font-size: 12px;
+    }
+
+    .header {
+        flex-direction: column;
+        padding: 10px 15px;
+        height: auto;
+        align-items: center;
+    }
+
+    .header .others {
+        font-size: 16px;
+        padding: 5px;
+    }
+
+    .logo-container .logo {
+        margin-right: 0;
+        margin-bottom: 10px;
+        width: 80px;
+    }
+
+    .main1 {
+        padding: 50px 20px;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .main1 h3 {
+        font-size: 1.5em;
+        margin-bottom: 20px;
+    }
+
+    .main1 span {
+        font-size: 2em;
+    }
+
+    .main_btn {
+        padding: 0.7em 1.5em;
+        font-size: 1em;
+    }
+
+    .content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #services .card {
+        width: 90%;
+        margin: 15px 0;
+    }
+
+    #contactss .containerr {
+        width: 90%;
+    }
+
+    #contactss .contact-content {
+        flex-direction: column;
+    }
+
+    .footer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer p {
+        margin-bottom: 15px;
+    }
 }
