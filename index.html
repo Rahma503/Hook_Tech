@@ -17,6 +17,7 @@
     <title>HOOK TECH</title>
 
     <style>
+        /* Base Styles for Carousel */
         .carousel {
             max-width: 70%;
             max-height: 50%;
@@ -40,7 +41,8 @@
             display: block;
         }
 
-        .carousel-caption h5, .carousel-caption p {
+        .carousel-caption h5,
+        .carousel-caption p {
             background: rgba(0, 0, 0, 0.5);
             padding: 5px 10px;
             border-radius: 5px;
@@ -51,10 +53,47 @@
             filter: invert(1);
         }
 
-        /* Optional: Control the carousel height if needed */
+        /* Optional: Control the carousel height */
         .carousel-inner {
-            height: 600px; /* Set a fixed height for carousel to keep consistency */
-            overflow: hidden; /* Hide overflowing parts if images are larger than the container */
+            height: 600px;
+            overflow: hidden;
+        }
+
+        /* Media Query for Phones */
+        @media (max-width: 768px) {
+            .carousel {
+                max-width: 100%;
+                /* Adjust to full width on smaller screens */
+                margin: 0 10px;
+                /* Add some horizontal margin */
+            }
+
+            .carousel-inner {
+                height: auto;
+                /* Allow height to adjust based on content */
+            }
+
+            .carousel-inner img {
+                max-height: 300px;
+                /* Reduce max height for smaller screens */
+                border-radius: 5px;
+                /* Slightly smaller border radius */
+            }
+
+            .carousel-caption h5,
+            .carousel-caption p {
+                font-size: 0.9rem;
+                /* Reduce font size for captions */
+                padding: 3px 7px;
+                /* Adjust padding for smaller screens */
+            }
+
+            .carousel-control-prev-icon,
+            .carousel-control-next-icon {
+                width: 30px;
+                /* Reduce control size */
+                height: 30px;
+            }
         }
     </style>
 </head>
@@ -181,249 +220,260 @@
                 </div>
             </div>
         </div>
+    </div>
+
+    <hr>
+
+    <section id="about">
+        <div dir="rtl" class="container">
+            <div class="title">
+                <h2>Hook Tech Values</h2>
+                <p>More than +2 years of experience</p>
+            </div>
+            <div class="about-content">
+                <div>
+
+                    <ul>
+                        <li><strong>الإبداع</strong>: ابتكار حملات مبتكرة تكسر الحدود التقليدية.</li>
+                        <li><strong>التعاون</strong>: العمل عن كثب مع العملاء لمواءمة الرؤى وتحقيق الأهداف المشتركة.
+                        </li>
+                        <li><strong>الأصالة</strong>: إنشاء رسائل حقيقية وقابلة للتواصل وتؤثر بشكل فعّال.</li>
+                        <li><strong>التركيز على النتائج</strong>: قياس النجاح من خلال التأثير الإيجابي على علامات
+                            العملاء التجارية.</li>
+                    </ul>
+
+
+                    <a href="#" class="main_btn">Learn more</a>
+
+                </div>
+                <img
+                    src='https://media.istockphoto.com/id/2157933640/photo/topview-asian-creative-team-they-are-discussing-ideas-and-working-on-things-together-to-come.jpg?s=2048x2048&w=is&k=20&c=5EW_AUnsPPSjTFFRpRKavaMyHPE5oBDRV3GTH4UYQy8='>
+            </div>
         </div>
 
-       <hr>
+    </section>
 
-        <section id="about">
-            <div  dir="rtl"   class="container">
-                <div class="title">
-                    <h2>Hook Tech Values</h2>
-                    <p>More than +2 years of experience</p>
+    <hr>
+
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+        <h2 class="title">Campaigns</h2>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="./images/WhatsApp Unknown 2024-12-31 at 8.01.30 PM/1.jpeg" class="d-block w-100"
+                    alt="First slide">
+                <div class="carousel-caption d-none d-md-block">
                 </div>
-                <div class="about-content">
-                    <div>
+            </div>
+            <div class="carousel-item">
+                <img src="./images/WhatsApp Unknown 2024-12-31 at 8.01.30 PM/2.jpeg" class="d-block w-100"
+                    alt="Second slide">
+                <div class="carousel-caption d-none d-md-block">
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="./images/WhatsApp Unknown 2024-12-31 at 8.01.30 PM/3.jpeg" class="d-block w-100"
+                    alt="Third slide">
+                <div class="carousel-caption d-none d-md-block">
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="./images/WhatsApp Unknown 2024-12-31 at 8.01.30 PM/4.jpeg" class="d-block w-100"
+                    alt="Fourth slide">
+                <div class="carousel-caption d-none d-md-block">
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="./images/WhatsApp Unknown 2024-12-31 at 8.01.30 PM/5.jpeg" class="d-block w-100"
+                    alt="Fifth slide">
+                <div class="carousel-caption d-none d-md-block">
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="./images/WhatsApp Unknown 2024-12-31 at 8.01.30 PM/6.jpeg" class="d-block w-100"
+                    alt="Sixth slide">
+                <div class="carousel-caption d-none d-md-block">
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="./images/WhatsApp Unknown 2024-12-31 at 8.01.30 PM/7.jpeg" class="d-block w-100"
+                    alt="Seventh slide">
+                <div class="carousel-caption d-none d-md-block">
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
 
-                        <ul>
-                            <li><strong>الإبداع</strong>: ابتكار حملات مبتكرة تكسر الحدود التقليدية.</li>
-                            <li><strong>التعاون</strong>: العمل عن كثب مع العملاء لمواءمة الرؤى وتحقيق الأهداف المشتركة.
-                            </li>
-                            <li><strong>الأصالة</strong>: إنشاء رسائل حقيقية وقابلة للتواصل وتؤثر بشكل فعّال.</li>
-                            <li><strong>التركيز على النتائج</strong>: قياس النجاح من خلال التأثير الإيجابي على علامات
-                                العملاء التجارية.</li>
-                        </ul>
 
 
-                        <a href="#" class="main_btn">Learn more</a>
+
+    <hr>
+
+
+
+
+    <div class="cards" id="reviewss">
+        <h2 class="title">Reviews</h2>
+        <div class="content">
+            <div class="review-card">
+                <div class="review-header">
+                    <img src="./images/p.jpg" alt="Customer" class="avatar">
+                    <span class="customer-name">أحمد العتيبي</span>
+                    <span class="timestamp">12:00 AM</span>
+                </div>
+                <p>"خدمتهم رهيبة واحترافية. فريق يعرف كيف يوصّل فكرتك ويوصلها صح."</p>
+                <div class="ratingg">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                </div>
+            </div>
+
+            <div class="review-card">
+                <div class="review-header">
+                    <img src="./images/p.jpg" alt="Customer" class="avatar">
+                    <span class="customer-name">عبدالله الشهراني</span>
+                    <span class="timestamp">10:37 PM</span>
+                </div>
+                <p>"شغلهم فوق الممتاز، زادوا المبيعات بسرعة. يستاهلون كل خير."</p>
+                <div class="ratingg">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                </div>
+            </div>
+
+            <div class="review-card">
+                <div class="review-header">
+                    <img src="./images/p.jpg" alt="Customer" class="avatar">
+                    <span class="customer-name">سعيد الدوسري</span>
+                    <span class="timestamp">11:15 AM</span>
+                </div>
+                <p>"فريق فاهم ومتعاون، خططهم التسويقية جابت لنا نتائج ملموسة"</p>
+                <div class="ratingg">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+            </div>
+            <div class="review-card">
+                <div class="review-header">
+                    <img src="./images/p.jpg" alt="Customer" class="avatar">
+                    <span class="customer-name">فاطمة الشمري</span>
+                    <span class="timestamp">1:15 AM</span>
+                </div>
+                <p>"اهتمامهم بالسوشيال ميديا فرق معنا كثير، ورفعوا اسمنا بشكل ملحوظ"
+
+                </p>
+                <div class="ratingg">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                </div>
+            </div>
+
+            <div class="review-card">
+                <div class="review-header">
+                    <img src="./images/p.jpg" alt="Customer" class="avatar">
+                    <span class="customer-name">عبدالله الحربي</span>
+                    <span class="timestamp">2:05 PM</span>
+                </div>
+                <p>"تصميماتهم مبدعة واستهدافهم للعملاء دقيق. تجربة تسويقية ما عليها كلام"
+
+                </p>
+                <div class="ratingg">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                </div>
+            </div>
+
+
+        </div>
+
+
+
+
+
+        <section id="contactss">
+            <div class="containerr">
+                <div class="title">
+                    <h2 class="contactheader">Contact Us</h2>
+
+                </div>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <div>
+                            <h3>العنوان</h3>
+                            <a href="https://maps.app.goo.gl/x5TZYmgPEcU35HXy7" target="_blank"
+                                style="text-decoration: none;  color:black; font-size: 20px;">
+                                <p class="loc">
+                                    <i class="fa-solid fa-location-dot"></i> New Helipolise
+                                </p>
+                            </a>
+
+
+                            <!-- <a href="https://maps.app.goo.gl/x5TZYmgPEcU35HXy7?g_st=com.google.maps.preview.copy" target="_blank"><p class="loc"> <i class="fa-solid fa-location-dot"></i> New Helipolise</p></a>  -->
+                            <p>
+                                <a href="https://wa.me/201025991871" target="_blank"
+                                    style="text-decoration: none; color:black; font-size: 20px;">
+                                    <i class="fa-brands fa-whatsapp"></i> +201025991871
+                                </a>
+                            </p>
+
+                            <i class="fa-solid fa-envelope"></i>
+                            <a href="mailto:" class="more-info" target="_blank">Heektech@gmail.com</a>
+
+                        </div>
+                        <div>
+                            <h3>مواعيد العمل</h3>
+
+                            <p>يوميا من ٩ ص الي ٦ مساءا ماعدا الجمعه </p>
+
+
+                        </div>
+                        <div class="social_icons">
+                            <h3>Follw us</h3>
+                            <a href="https://www.facebook.com/share/1NgTLzn4cU/?mibextid=wwXIfr" class="fab fa-facebook"
+                                target="_blank"></a>
+                            <a href="https://www.instagram.com/hook_tech_marketingagency?igsh=MXhvOXM3NWp2dmc2Mg%3D%3D&utm_source=qr"
+                                class="fab fa-instagram" target="_blank"></a>
+                        </div>
 
                     </div>
-                    <img src='https://media.istockphoto.com/id/2157933640/photo/topview-asian-creative-team-they-are-discussing-ideas-and-working-on-things-together-to-come.jpg?s=2048x2048&w=is&k=20&c=5EW_AUnsPPSjTFFRpRKavaMyHPE5oBDRV3GTH4UYQy8='  >
+
                 </div>
             </div>
 
         </section>
 
-        <hr>
+        <div class="footer">
+            <p>Copyrights &copy; <span>Hook Tech</span> </p>
 
-        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-            <h2 class="title">Campaigns</h2>
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="./images/WhatsApp Unknown 2024-12-31 at 8.01.30 PM/1.jpeg" class="d-block w-100" alt="First slide">
-                    <div class="carousel-caption d-none d-md-block">
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <img src="./images/WhatsApp Unknown 2024-12-31 at 8.01.30 PM/2.jpeg" class="d-block w-100" alt="Second slide">
-                    <div class="carousel-caption d-none d-md-block">
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <img src="./images/WhatsApp Unknown 2024-12-31 at 8.01.30 PM/3.jpeg" class="d-block w-100" alt="Third slide">
-                    <div class="carousel-caption d-none d-md-block">
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <img src="./images/WhatsApp Unknown 2024-12-31 at 8.01.30 PM/4.jpeg" class="d-block w-100" alt="Fourth slide">
-                    <div class="carousel-caption d-none d-md-block">
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <img src="./images/WhatsApp Unknown 2024-12-31 at 8.01.30 PM/5.jpeg" class="d-block w-100" alt="Fifth slide">
-                    <div class="carousel-caption d-none d-md-block">
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <img src="./images/WhatsApp Unknown 2024-12-31 at 8.01.30 PM/6.jpeg" class="d-block w-100" alt="Sixth slide">
-                    <div class="carousel-caption d-none d-md-block">
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <img src="./images/WhatsApp Unknown 2024-12-31 at 8.01.30 PM/7.jpeg" class="d-block w-100" alt="Seventh slide">
-                    <div class="carousel-caption d-none d-md-block">
-                    </div>
-                </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
+
         </div>
-        
-        
- 
-        
-        <hr>
 
-
-
-
-        <div class="cards" id="reviewss">
-            <h2 class="title">Reviews</h2>
-            <div class="content">
-                <div class="review-card">
-                    <div class="review-header">
-                        <img src="./images/p.jpg" alt="Customer" class="avatar">
-                        <span class="customer-name">أحمد العتيبي</span>
-                        <span class="timestamp">12:00 AM</span>
-                    </div>
-                    <p>"خدمتهم رهيبة واحترافية. فريق يعرف كيف يوصّل فكرتك ويوصلها صح."</p>
-                    <div class="ratingg">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star-half-stroke"></i>
-                    </div>
-                </div>
-
-                <div class="review-card">
-                    <div class="review-header">
-                        <img src="./images/p.jpg" alt="Customer" class="avatar">
-                        <span class="customer-name">عبدالله الشهراني</span>
-                        <span class="timestamp">10:37 PM</span>
-                    </div>
-                    <p>"شغلهم فوق الممتاز، زادوا المبيعات بسرعة. يستاهلون كل خير."</p>
-                    <div class="ratingg">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star-half-stroke"></i>
-                    </div>
-                </div>
-
-                <div class="review-card">
-                    <div class="review-header">
-                        <img src="./images/p.jpg" alt="Customer" class="avatar">
-                        <span class="customer-name">سعيد الدوسري</span>
-                        <span class="timestamp">11:15 AM</span>
-                    </div>
-                    <p>"فريق فاهم ومتعاون، خططهم التسويقية جابت لنا نتائج ملموسة"</p>
-                    <div class="ratingg">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                    </div>
-                </div>
-                <div class="review-card">
-                    <div class="review-header">
-                        <img src="./images/p.jpg" alt="Customer" class="avatar">
-                        <span class="customer-name">فاطمة الشمري</span>
-                        <span class="timestamp">1:15 AM</span>
-                    </div>
-                    <p>"اهتمامهم بالسوشيال ميديا فرق معنا كثير، ورفعوا اسمنا بشكل ملحوظ"
-
-                    </p>
-                    <div class="ratingg">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star-half-stroke"></i>
-                    </div>
-                </div>
-
-                <div class="review-card">
-                    <div class="review-header">
-                        <img src="./images/p.jpg" alt="Customer" class="avatar">
-                        <span class="customer-name">عبدالله الحربي</span>
-                        <span class="timestamp">2:05 PM</span>
-                    </div>
-                    <p>"تصميماتهم مبدعة واستهدافهم للعملاء دقيق. تجربة تسويقية ما عليها كلام"
-
-                    </p>
-                    <div class="ratingg">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star-half-stroke"></i>
-                    </div>
-                </div>
-
-
-            </div>
-
-
-
-
-
-            <section id="contactss">
-                <div class="containerr">
-                    <div class="title">
-                        <h2 class="contactheader">Contact Us</h2>
-
-                    </div>
-                    <div class="contact-content">
-                        <div class="contact-info">
-                            <div>
-                                <h3>العنوان</h3>
-                                <a href="https://maps.app.goo.gl/x5TZYmgPEcU35HXy7" target="_blank"
-                                    style="text-decoration: none;  color:black; font-size: 20px;">
-                                    <p class="loc">
-                                        <i class="fa-solid fa-location-dot"></i> New Helipolise
-                                    </p>
-                                </a>
-
-
-                                <!-- <a href="https://maps.app.goo.gl/x5TZYmgPEcU35HXy7?g_st=com.google.maps.preview.copy" target="_blank"><p class="loc"> <i class="fa-solid fa-location-dot"></i> New Helipolise</p></a>  -->
-                                <p>
-                                    <a href="https://wa.me/201025991871" target="_blank" style="text-decoration: none; color:black; font-size: 20px;">
-                                        <i class="fa-brands fa-whatsapp"></i> +201025991871
-                                    </a>
-                                </p>
-                                
-                                <i class="fa-solid fa-envelope"></i>
-                                <a href="mailto:" class="more-info" target="_blank">Heektech@gmail.com</a>
-
-                            </div>
-                            <div>
-                                <h3>مواعيد العمل</h3>
-
-                                <p>يوميا من ٩ ص الي ٦ مساءا ماعدا الجمعه </p>
-
-
-                            </div>
-                            <div class="social_icons">
-                                <h3>Follw us</h3>
-                                <a href="https://www.facebook.com/share/1NgTLzn4cU/?mibextid=wwXIfr"
-                                    class="fab fa-facebook" target="_blank"></a>
-                                <a href="https://www.instagram.com/hook_tech_marketingagency?igsh=MXhvOXM3NWp2dmc2Mg%3D%3D&utm_source=qr"
-                                    class="fab fa-instagram" target="_blank"></a>
-                            </div>
-
-                        </div>
-
-                    </div>
-                </div>
-
-            </section>
-
-            <div class="footer">
-                <p>Copyrights &copy; <span>Hook Tech</span> </p>
-
-
-            </div>
-
-<!-- Bootstrap JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Bootstrap JS -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 

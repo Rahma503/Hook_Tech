@@ -87,84 +87,115 @@
     color: aliceblue;
 }
 
-.main1{
-    padding: 100px 200px;
+.main1 {
+    padding: 50px 20px; /* Adjust padding for better responsiveness */
     width: 100%;
     min-height: 100vh;
     display: flex;
     align-items: center;
+    justify-content: center; /* Center content horizontally */
+    text-align: center; /* Center-align text */
     background: url('https://img.freepik.com/free-photo/flat-lay-workstation-with-cup-tea-copy-space_23-2148430864.jpg?t=st=1736283680~exp=1736287280~hmac=bdc00bf6c5a62327fd08248086c77b3bdd6783400740ceb6091ec162aa14562e&w=1380') center center/cover no-repeat;
-    /* background-color: #dcdcdd; */
     background-size: cover;
     background-position: center;
-    /* background-attachment: fixed; */
     margin-bottom: 30px;
-
+    position: relative; /* Ensure relative positioning for pseudo-element */
 }
-.main1::before{
+
+.main1::before {
     content: "";
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgb(0, 0, 0, 0.4);
+    background: rgba(0, 0, 0, 0.4); /* Adjust opacity for better contrast */
+    z-index: 0; /* Place behind content */
 }
-/* 
-.main1 h2{
-    color: #1985a1;
-    font-size: 25px;
-    font-weight: 700;
-} */
 
-.main1 span{
+.main1 span {
     display: inline-block;
     margin-top: 10px;
     color: var(--wcolor);
     font-size: 3em;
     font-weight: 800;
-
+    z-index: 1; /* Ensure it appears above the background overlay */
+    position: relative;
 }
-.main1 h3{
+
+.main1 h3 {
     color: #f4f0ed;
     font-size: 2em;
     font-weight: 500;
     letter-spacing: 1px;
     margin-top: 10px;
     margin-bottom: 30px;
+    z-index: 1; /* Ensure it appears above the background overlay */
+    position: relative;
 }
 
-.main1 .main_btn , #about .main_btn{
+.main1 .main_btn, 
+#about .main_btn {
     display: inline-block;
     text-decoration: none;
     background-color: var(--wcolor);
     color: aliceblue;
     border-radius: 20px;
-    padding: 0.9375em 2.1875em; 
+    padding: 0.9375em 2.1875em;
     margin-bottom: 20px;
     letter-spacing: 1px;
     font-size: 1.1em;
     transition: 0.7s ease;
     margin-right: 10px;
     margin-top: 10px;
+    z-index: 1; /* Ensure it appears above the background overlay */
+    position: relative;
 }
-.social_icons a{
+
+.social_icons a {
     text-decoration: none;
     color: #f4efeb;
     font-size: 2.5em;
-    
     padding: 10px;
-
+    z-index: 1; /* Ensure it appears above the background overlay */
+    position: relative;
 }
-.social_icons a:hover{
+
+.social_icons a:hover {
     color: var(--wcolor);
 }
 
-.main_btn:hover{
-    background-color:var(--wcolor);
+.main_btn:hover {
+    background-color: var(--wcolor);
     transform: scale(1.1);
-
 }
+
+/* Media Query for Phones and Tablets */
+@media (max-width: 768px) {
+    .main1 {
+        padding: 20px; /* Reduce padding for smaller screens */
+        flex-direction: column; /* Stack content vertically */
+        text-align: center;
+    }
+
+    .main1 span {
+        font-size: 2em; /* Reduce font size */
+    }
+
+    .main1 h3 {
+        font-size: 1.5em; /* Reduce font size */
+    }
+
+    .main1 .main_btn {
+        font-size: 0.9em; /* Reduce button font size */
+        padding: 0.7em 1.5em; /* Adjust padding */
+    }
+
+    .social_icons a {
+        font-size: 2em; /* Reduce icon size */
+    }
+}
+
 
 .title{
     text-align: center;
@@ -354,77 +385,60 @@
 
 
 
+/* Contactss */
 
-
-
-
-
-
-#contactss{
-    /* padding: 2rem 40px; */
+#contactss {
     background-color: rgb(247, 238, 222);
     padding-top: 25px;
- 
-
 }
-#contactss .contactheader{
+
+#contactss .contactheader {
     display: flex;
     font-size: 50px;
     margin-left: 210px;
-    
-
 }
-#contactss .containerr{
-    
+
+#contactss .containerr {
     width: 800px;
-    
 }
 
-#contactss .contact-content{
+#contactss .contact-content {
     display: flex;
-   justify-content: center;
-   align-items: center;
-
+    justify-content: center;
+    align-items: center;
+    gap: 2rem; /* Add spacing between items */
 }
 
-#contactss .contact-content .contact-info{
+#contactss .contact-content .contact-info {
     width: 50%;
 }
 
-
-#contactss .contact-content .contact-info div{ 
+#contactss .contact-content .contact-info div {
     margin: 30px 20px;
     line-height: 1.7;
 }
 
-#contactss .contact-content .contact-info h3{ 
+#contactss .contact-content .contact-info h3 {
     font-size: 28px;
     margin-bottom: 10px;
-   
-
- 
 }
 
-#contactss .contact-content .contact-info p{ 
+#contactss .contact-content .contact-info p {
     font-family: 500;
     font-size: 20px;
     display: flex;
-    /* color: #c85e07; */
-  /* width: 33.33%; */
- 
 }
 
-
-#contactss .contact-content .more-info{
+#contactss .contact-content .more-info {
     text-decoration: none;
     color: var(--wcolor);
     font-size: 20px;
-    
 }
 
-
-#contactss .social_icons .fab , .fa-envelope ,.fa-location-dot ,.fa-brands{ 
-    /* text-decoration: none; */
+#contactss .social_icons .fab, 
+#contactss .fa-envelope, 
+#contactss .fa-location-dot, 
+#contactss .fa-brands {
     color: var(--wcolor);
     font-size: 30px;
     margin-right: 15px;
@@ -432,268 +446,51 @@
     font-size: 2.2rem;
 }
 
-#contactss .social_icons .fab:hover , .fa-envelope:hover , .fa-location-dot:hover ,.fa-brands:hover{
+#contactss .social_icons .fab:hover, 
+#contactss .fa-envelope:hover, 
+#contactss .fa-location-dot:hover, 
+#contactss .fa-brands:hover {
     color: #171411;
 }
 
-
-
-@media (max-width:1023px){
-    .header{
-        padding: 12px 15px;
-    }
-    .header .others{
-        padding-left: 10px;
-    }
-    .title{
-        font-size: 1.7em;
-    }
-    div{
-        padding: 80px 20px;
-    }
-    .main1 h2{
-        font-size: 1em;
-    }
-    .main1 h3{
-        font-size: 1.6em;
-    }
-    .content{
-        flex-direction: column;
-        align-items: center;
-    }
-    .logo{
-        margin-right: 120px;
-    }
-    .image{
-        background-size: cover;
-        width: 50%;
-    }
-
-}
-
-@media (max-width: 500px) {
-    body {
-        font-size: 12px;
-    }
-
-    .header {
-        flex-direction: column;
-        padding: 10px 15px;
-        height: auto;
-        align-items: center;
-    }
-
-    .header .others {
-        font-size: 16px;
-        padding: 5px;
-    }
-
-    .logo-container .logo {
-        margin-right: 0;
-        margin-bottom: 10px;
-        width: 80px;
-    }
-
-    .main1 {
-        padding: 50px 20px;
-        flex-direction: column;
+/* Media Query for Responsiveness */
+@media (max-width: 768px) {
+    #contactss .contactheader {
+        font-size: 36px; /* Reduce header font size */
+        margin-left: 0; /* Center align the header */
         text-align: center;
     }
 
-    .main1 h3 {
-        font-size: 1.5em;
-        margin-bottom: 20px;
-    }
-
-    .main1 span {
-        font-size: 2em;
-    }
-
-    .main_btn {
-        padding: 0.7em 1.5em;
-        font-size: 1em;
-    }
-
-    .content {
-        flex-direction: column;
-        align-items: center;
-        margin: 0;
-    }
-
-    #services .card {
-        width: 90%;
-        margin: 15px 0;
-    }
-
-    .image-slider {
-        width: 90%;
-        margin: 20px auto;
-    }
-
-    .slider-wrapper {
-        flex-direction: column;
-    }
-
-    #reviews .review-card {
-        width: 90%;
-        margin: 10px auto;
-    }
-
-    #about .about-content {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    #about .about-content img {
-        width: 100%;
-        height: auto;
-        margin-bottom: 20px;
-    }
-
-    #contactss .container {
-        width: 90%;
+    #contactss .containerr {
+        width: 100%; /* Make container full width */
+        padding: 0 1rem; /* Add padding for smaller screens */
     }
 
     #contactss .contact-content {
-        flex-direction: column;
+        flex-direction: column; /* Stack items vertically */
+        align-items: flex-start; /* Align items to the left */
     }
 
     #contactss .contact-content .contact-info {
-        width: 100%;
+        width: 100%; /* Full width for contact info */
     }
 
-    #contactss .contact-content .contact-info div {
-        margin: 15px 10px;
+    #contactss .contact-content .contact-info h3 {
+        font-size: 24px; /* Reduce font size */
     }
 
-    .footer {
-        flex-direction: column;
-        text-align: center;
+    #contactss .contact-content .contact-info p {
+        font-size: 18px; /* Adjust font size */
     }
 
-    .footer p {
-        margin-bottom: 15px;
-    }
-}
-
-
-
-@media (max-width: 1023px) {
-    .header {
-        padding: 12px 15px;
-    }
-
-    .title {
-        font-size: 1.7em;
-    }
-
-    .main1 {
-        padding: 80px 20px;
-    }
-
-    .main1 h2 {
-        font-size: 1em;
-    }
-
-    .main1 h3 {
-        font-size: 1.6em;
-    }
-
-    .content {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .logo-container .logo {
-        margin-right: 120px;
-    }
-
-    #services .card {
-        width: 90%;
-        margin: 15px 0;
-    }
-
-    #contactss .containerr {
-        width: 90%;
-    }
-
-    .footer {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .footer p {
-        margin-bottom: 15px;
+    #contactss .social_icons .fab, 
+    #contactss .fa-envelope, 
+    #contactss .fa-location-dot, 
+    #contactss .fa-brands {
+        font-size: 1.5rem; /* Reduce icon size */
+        margin-right: 10px;
+        margin-bottom: 8px;
     }
 }
 
-@media (max-width: 500px) {
-    body {
-        font-size: 12px;
-    }
 
-    .header {
-        /* flex-direction: column; */
-        padding: 10px 15px;
-        height: auto;
-        align-items: center;
-    }
-
-    .header .others {
-        font-size: 16px;
-        padding: 5px;
-    }
-
-    .logo-container .logo {
-        margin-right: 0;
-        margin-bottom: 10px;
-        width: 80px;
-    }
-
-    .main1 {
-        padding: 50px 20px;
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .main1 h3 {
-        font-size: 1.5em;
-        margin-bottom: 20px;
-    }
-
-    .main1 span {
-        font-size: 2em;
-    }
-
-    .main_btn {
-        padding: 0.7em 1.5em;
-        font-size: 1em;
-    }
-
-    .content {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    #services .card {
-        width: 90%;
-        margin: 15px 0;
-    }
-
-    #contactss .containerr {
-        width: 90%;
-    }
-
-    #contactss .contact-content {
-        flex-direction: column;
-    }
-
-    .footer {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .footer p {
-        margin-bottom: 15px;
-    }
-}
